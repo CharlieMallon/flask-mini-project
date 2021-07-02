@@ -4,6 +4,7 @@ if os.path.exists("env.py"):
     import env
 
 
+print(os.environ.get("IP"))
 app = Flask(__name__)
 
 
