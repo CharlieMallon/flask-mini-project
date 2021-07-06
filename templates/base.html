@@ -25,7 +25,9 @@
 			href="{{ url_for('static', filename='css/style.css') }}"
 			type="text/css"
 		/>
-		{% block styles %} {% endblock %}
+        <!-- custom Style sheet -->
+		{% block styles %}
+        {% endblock %}
 		<title>Task Manager</title>
 	</head>
 	<body>
@@ -44,7 +46,7 @@
 						<li><a href="#">Manage Categories</a></li>
 						<li><a href="#">Log Out</a></li>
 						<li><a href="#">Log In</a></li>
-						<li><a href="#">Register</a></li>
+						<li><a href="{{ url_for('register') }}">Register</a></li>
 					</ul>
 				</div>
 			</nav>
@@ -58,11 +60,12 @@
 				<li><a href="#">Manage Categories</a></li>
 				<li><a href="#">Log Out</a></li>
 				<li><a href="#">Log In</a></li>
-				<li><a href="#">Register</a></li>
+				<li><a href="{{ url_for('register') }}">Register</a></li>
 			</ul>
 		</header>
 
-		{% block content %} {% endblock %}
+		{% block content %}
+        {% endblock %}
 
 		<!-- Jquery Script Tag -->
 		<script
@@ -75,6 +78,7 @@
 		<!-- My js -->
 		<script src="{{ url_for('static', filename='js/script.js') }}"></script>
 		<!-- Custom JS -->
-		{% block scripts %} {% endblock %}
+		{% block scripts %}
+        {% endblock %}
 	</body>
 </html>
